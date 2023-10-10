@@ -14,15 +14,15 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Weather App'),
-        backgroundColor: Colors.blue,
         actions: [
           IconButton(
             onPressed: () {
               Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const SearchView(),
-                  ));
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const SearchView(),
+                ),
+              );
             },
             icon: const Icon(Icons.search_sharp),
           ),

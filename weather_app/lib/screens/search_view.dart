@@ -11,15 +11,14 @@ class SearchView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Search a City'),
-        backgroundColor: Colors.orangeAccent,
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Center(
           child: TextField(
             onSubmitted: (value) async {
-              await getWeatherCubit.getWeather(cityName: value);
               Navigator.pop(context);
+              await getWeatherCubit.getWeather(cityName: value);
             },
             decoration: const InputDecoration(
               contentPadding: EdgeInsets.all(30),
